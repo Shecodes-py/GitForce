@@ -6,6 +6,7 @@ class CustomUser(AbstractUser):
     username = models.CharField(max_length=150, unique=True)
     email = models.EmailField(unique=True)
     full_name = models.CharField(max_length=30)
+    farm_location = models.CharField(max_length=100, blank=True, null=True)
     date_joined = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):

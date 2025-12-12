@@ -30,7 +30,7 @@ SECRET_KEY = 'django-insecure-r4futfexp+#q35!ifemf%0efso5evr_)#m8!lh$zbxqat()5z@
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
@@ -120,3 +120,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/6.0/howto/static-files/
 
 STATIC_URL = 'static/'
+
+
+CORS_ALLOWED_ORIGINS = [
+    "https://agrotech-three.vercel.app",
+    "http://localhost:3000",
+]
