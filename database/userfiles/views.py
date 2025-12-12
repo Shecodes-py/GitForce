@@ -18,7 +18,7 @@ from rest_framework.parsers import FormParser, MultiPartParser
 from rest_framework.permissions import AllowAny
 from twilio.twiml.messaging_response import MessagingResponse
 
-from dootenv import load_dotenv
+from dotenv import load_dotenv
 
 load_dotenv()
 
