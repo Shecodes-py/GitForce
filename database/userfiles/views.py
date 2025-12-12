@@ -28,7 +28,10 @@ class UserProfileView(generics.RetrieveAPIView):
     queryset = CustomUser.objects.all()
     serializer_class = CustomUserSerializer  
 
-genai.configure(api_key=os.getenv("google_api_key"))
+google_api_key = os.getenv("google_api_key")
+if not google_api_key:
+    raise RuntimeError("Missing required environment variable: 'google_api_key'")
+genai.configure(api_key=google_api_key)
 
 class WhatsAppBotView(APIView):
     parser_classes = [FormParser, MultiPartParser]
